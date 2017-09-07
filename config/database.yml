@@ -1,0 +1,19 @@
+default: &default
+      adapter: postgresql
+      encoding: unicode
+      pool: 5
+      username: postgres
+      password: password
+      host:     <%= ENV['IP'] %>
+
+development:
+  <<: *default
+  database: simple-accounting_development
+
+test:
+  <<: *default
+  database: simple-accounting_test
+
+production:
+  <<: *default
+  database: simple-accounting_production
