@@ -1,6 +1,6 @@
 class RecordsController < ApplicationController
 	def index
-		@records = Record.all.order('id ASC').paginate(:page => params[:page])
+		# @records = Record.all.order('sn ASC').paginate(:page => params[:page])
 	end
 
 	def create

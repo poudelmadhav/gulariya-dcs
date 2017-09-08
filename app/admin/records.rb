@@ -1,15 +1,13 @@
 ActiveAdmin.register Record do
-	menu priority: 1
+	menu priority: 2
 
-	permit_params :sn, :kba, :tr_sn, :company_name, :send_date, :dismn_place, :received_date, :location, :remarks
+	permit_params :sn, :kba, :tr_sn, :company_name, :send_date, :dismn_place, :get_pass, :location, :remarks
 
 	filter :kba
 	filter :tr_sn
 	filter :company_name
 	filter :send_date
 	filter :dismn_place
-	filter :received_date
-	filter :location
 
 	index do
 		selectable_column
@@ -19,9 +17,7 @@ ActiveAdmin.register Record do
 		column :company_name
 		column :send_date
 		column 'Dismantalled Place', :dismn_place
-		column 'Received No.', :received_no
-		column :received_date
-		column 'Installed Place', :location
+		column 'Send Gate Pass No.', :get_pass
 		column :remarks
 		actions
 	end
@@ -34,9 +30,7 @@ ActiveAdmin.register Record do
 	      f.input :company_name
 	      f.input :send_date
 	      f.input :dismn_place, label: 'Dismantalled Place'
-	      f.input :received_no, label: 'Received No.'
-	      f.input :received_date
-	      f.input :location, label: 'Installed Place'
+	      f.input :get_pass, label: 'Send Gate Pass No.'
 	      f.input :remarks
 	    end
 	    f.actions

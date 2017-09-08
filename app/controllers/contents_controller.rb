@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
 	def index
-		@contents = Content.all.order('id ASC').paginate(:page => params[:page])
+		# @contents = Content.all.order('created_at DESC').paginate(:page => params[:page])
 	end
 
 	def create
