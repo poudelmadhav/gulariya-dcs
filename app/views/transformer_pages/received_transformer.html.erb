@@ -1,0 +1,54 @@
+
+<div class = "panel panel-default">
+	<div class = "panel-body">
+		<h1 class="float-right">No. of Transformer Received after Maintenance from Factory: <%= Content.narayan %></h1>
+	</div>
+</div>
+<div class="row">
+  <div class="col-xs-6"><h1>Received Transformer</h1></div>
+  <div class="col-xs-6"><%= link_to 'New Record', new_content_path, class: 'float-right btn btn-md btn-success' %></div>
+</div>
+
+<div class = "panel panel-default">
+	<div class = "panel-body">
+		<blockquote>
+			<table class = "table table-bordered">
+				<thead>
+					<tr>
+					  <th>S.N.</th>
+	                  <th>Capacity(kVA)</th>
+	                  <th>TR Serial No.</th>
+	                  <th>Company Name</th>
+	                  <th>Received Date</th>
+	                  <th>Installed Place</th>
+	                  <th>Received Gate Pass No.</th>
+	                  <th>Remarks</th>
+	                </tr>
+				</thead>
+				<tbody>
+					<% @contents.each do |content| %>
+					  <tr>
+					  	  <td><%= content.sn %></td>
+					  	  <td><%= content.kva %></td>
+						  <td><%= content.tr_sn %></td>
+						  <td><%= content.company_name %></td>
+						  <td><%= content.received_date %></td>
+						  <td><%= content.install_place %></td>
+						  <td><%= content.received_no %></td>
+						  <td><%= content.remarks %></td>
+						  
+						  <td><%= link_to 'Edit', edit_content_path(content), class: 'btn btn-warning'%></td>
+						  <td><%= link_to 'Delete', content_path(content), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %></td>
+							
+					  	</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</blockquote>
+		
+	</div>
+
+	<div class = "text-center">
+		<%= will_paginate @contents %>
+	</div>
+</div>

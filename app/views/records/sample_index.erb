@@ -1,0 +1,54 @@
+<div class = "panel panel-default">
+	<div class = "panel-body">
+		<h1 class="float-right">No. of Transformer Send for Maintenance to Factory: <%= Record.madhav %></h1>
+		<h1 class="float-right">No. of Transformer Received from Factory: <%= Record.narayan %></h1>
+		<h1 class="float-right">No. of Transformer in Factory: <%= Record.total %></h1>
+
+	</div>
+</div>
+
+<div class = "panel panel-default">
+	<div class = "panel-body">
+		<blockquote>
+			<table class = "table table-bordered">
+				<thead>
+					<tr>
+					  <th>S.N.</th>
+	                  <th>Capacity(kVA)</th>
+	                  <th>TR Serial No.</th>
+	                  <th>Company Name</th>
+	                  <th>Send Date</th>
+	                  <th>Dismantalled Place</th>
+	                  <th>Received No.</th>
+	                  <th>Received Date</th>
+	                  <th>Installed Place</th>
+	                  <th>Remarks</th>
+	                </tr>
+				</thead>
+				<tbody>
+					<% @records.each do |record| %>
+					  <tr>
+					  	  <td><%= record.sn %></td>
+					  	  <td><%= record.kba %></td>
+						  <td><%= record.tr_sn %></td>
+						  <td><%= record.company_name %></td>
+						  <td><%= record.send_date %></td>
+						  <td><%= record.dismn_place %></td>
+						  <td><%= record.received_no %></td>
+						  <td><%= record.received_date %></td>
+						  <td><%= record.location %></td>
+						  <td><%= record.remarks %></td>
+						  <!--
+						  <td><%= link_to 'Edit', edit_record_path(record), class: 'btn btn-warning'%></td>
+						  <td><%= link_to 'Delete', record_path(record), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %></td>
+							-->
+					  	</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</blockquote>
+		<div class = "text-center">
+			<%= will_paginate @ideas %>
+		</div>
+	</div>
+</div>

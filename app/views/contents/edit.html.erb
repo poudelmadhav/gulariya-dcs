@@ -1,0 +1,13 @@
+<h1>Update Record</h1>
+<%= simple_form_for @content, method: :patch do |f| %>
+  <%= f.input :sn, label: 'S.N.' %>
+  <%= f.input :kva, label: 'Capacity(kVA)' %>
+  <%= f.input :tr_sn, label: 'TR Serial No.' %>
+  <%= f.input :company_name %>
+  <%= f.input :received_date %>
+  <%= f.input :install_place, label: 'Installed Place' %>
+  <%= f.input :received_no, label: 'Received Gate Pass No.' %>
+  <%= f.input :remarks %>
+
+  <%= f.submit 'Update Record', class: 'btn btn-success' %>
+<% end %>
