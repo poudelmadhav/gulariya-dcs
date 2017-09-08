@@ -1,4 +1,4 @@
-ActiveAdmin.register Record do
+ActiveAdmin.register Record, :as => "Send Transformers" do
 	menu priority: 2
 
 	permit_params :sn, :kba, :tr_sn, :company_name, :send_date, :dismn_place, :get_pass, :location, :remarks
@@ -9,7 +9,7 @@ ActiveAdmin.register Record do
 	filter :send_date
 	filter :dismn_place
 
-	index do
+	index :title => 'Send Transformers'do
 		selectable_column
 		column 'S.N.', :sn, :sortable => :sn
 		column 'Capacity(kVA)', :kba

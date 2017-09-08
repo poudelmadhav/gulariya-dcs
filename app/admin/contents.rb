@@ -1,4 +1,4 @@
-ActiveAdmin.register Content do
+ActiveAdmin.register Content, :as => "Received Transformers" do
 	menu priority: 3
 
 	permit_params :sn, :kva, :tr_sn, :company_name, :received_date, :install_place, :received_no, :location, :remarks
@@ -9,7 +9,7 @@ ActiveAdmin.register Content do
 	filter :received_date
 	filter :install_place
 
-	index do
+	index :title => 'Received Transformers' do
 		selectable_column
 		column 'S.N.', :sn, :sortable => :sn
 		column 'Capacity(kVA)', :kba
