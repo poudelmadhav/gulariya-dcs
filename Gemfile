@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#devise gem for users
+gem 'devise'
+
 # admin Panel
 gem 'activeadmin', github: 'activeadmin'
 
