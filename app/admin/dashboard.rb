@@ -7,7 +7,7 @@ ActiveAdmin.register_page "Dashboard" do
         table_for Record.order("created_at DESC").limit(5) do
             column :sn
             column "TR Serial No.", :tr_sn # do |record|
-                # link_to record.tr_sn, [:admin, send_transformers]
+            #     link_to record.tr_sn, [:admin, record]
             # end
             column 'Capacity(kVA)', :kba
             column :send_date

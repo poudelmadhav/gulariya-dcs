@@ -12,7 +12,7 @@ ActiveAdmin.register Content, :as => "Received Transformers" do
 	index :title => 'Received Transformers' do
 		selectable_column
 		column 'S.N.', :sn, :sortable => :sn
-		column 'Capacity(kVA)', :kba
+		column 'Capacity(kVA)', :kva
 		column 'TR Serial No.', :tr_sn
 		column :company_name
 		column :received_date
