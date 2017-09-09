@@ -36,4 +36,17 @@ ActiveAdmin.register Record, :as => "Sent Transformer" do
 	    f.actions
 	end
 
+	show do
+		attributes_table do
+			row :sn
+			row :kba
+			row :tr_sn
+			row :company_name
+			row :send_date
+			row :dismn_place
+			row :get_pass
+			row :remarks
+    	end
+	end
+
 end

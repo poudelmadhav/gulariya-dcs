@@ -35,4 +35,18 @@ ActiveAdmin.register Content, :as => "Received Transformer" do
 	    end
 	    f.actions
 	end
+
+	show do
+		attributes_table do
+			row :sn
+			row :kva
+			row :tr_sn
+			row :company_name
+			row :received_date
+			row :install_place
+			row :received_no
+			row :remarks
+    	end
+	end
+
 end
