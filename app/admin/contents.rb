@@ -1,4 +1,4 @@
-ActiveAdmin.register Content, :as => "Received Transformers" do
+ActiveAdmin.register Content, :as => "Received Transformer" do
 	menu priority: 3
 
 	permit_params :sn, :kva, :tr_sn, :company_name, :received_date, :install_place, :received_no, :location, :remarks

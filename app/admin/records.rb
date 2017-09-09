@@ -1,4 +1,4 @@
-ActiveAdmin.register Record, :as => "Sent Transformers" do
+ActiveAdmin.register Record, :as => "Sent Transformer" do
 	menu priority: 2
 
 	permit_params :sn, :kba, :tr_sn, :company_name, :send_date, :dismn_place, :get_pass, :location, :remarks
