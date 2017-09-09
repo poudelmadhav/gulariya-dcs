@@ -7,7 +7,7 @@ module ActiveAdmin
         super :style => "text-align: center;"                                
 
         div do                                                                   
-          "Designed and Developed by Madhav Paudel #{Date.today.year}"                                       
+          "Designed and Developed by Madhav Paudel © #{Date.today.year}. All Rights Reserved."                                      
         end
       end
 
