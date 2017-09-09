@@ -4,10 +4,10 @@ module ActiveAdmin
 
       def build (namespace)
         super :id => "footer"                                                    
-        super :style => "text-align: center;"                                
+        super :style => "text-align: left;"                                
 
-        div do                                                                   
-          "Designed and Developed by Madhav Paudel © #{Date.today.year}. All Rights Reserved."                                      
+        div do                                      
+          para "Designed and Developed by #{link_to('Madhav Paudel', 'http://poudelmadhav.com.np')} &copy; #{Date.today.year.to_s}. All Rights Reserved.".html_safe                                    
         end
       end
 
