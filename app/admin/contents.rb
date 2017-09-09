@@ -23,7 +23,7 @@ ActiveAdmin.register Content, :as => "Received Transformers" do
 	end
 
 	form do |f|
-		f.inputs "Record Details" do
+		f.inputs "Received Transformer Details" do
 	      f.input :sn,  label: 'S.N.'
 	      f.input :kva, :label => 'Capacity(kVA)'
 	      f.input :tr_sn, :label => 'TR Serial No.'

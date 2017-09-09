@@ -4,6 +4,6 @@ class Record < ApplicationRecord
 	self.per_page = 50
 
 	def self.madhav
-		count(:kba)
+		count(:id)
 	end
 end

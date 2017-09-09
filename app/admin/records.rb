@@ -9,7 +9,7 @@ ActiveAdmin.register Record, :as => "Send Transformers" do
 	filter :send_date
 	filter :dismn_place
 
-	index :title => 'Send Transformers'do
+	index :title => 'Sent Transformers'do
 		selectable_column
 		column 'S.N.', :sn, :sortable => :sn
 		column 'Capacity(kVA)', :kba
@@ -23,7 +23,7 @@ ActiveAdmin.register Record, :as => "Send Transformers" do
 	end
 
 	form do |f|
-		f.inputs "Record Details" do
+		f.inputs "Sent Transformers Details" do
 	      f.input :sn,  label: 'S.N.'
 	      f.input :kba, :label => 'Capacity(kVA)'
 	      f.input :tr_sn, :label => 'TR Serial No.'

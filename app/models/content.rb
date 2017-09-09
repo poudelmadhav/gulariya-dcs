@@ -4,6 +4,6 @@ class Content < ApplicationRecord
 	self.per_page = 50
 	
 	def self.narayan
-		count(:kva)
+		count(:id)
 	end	
 end
