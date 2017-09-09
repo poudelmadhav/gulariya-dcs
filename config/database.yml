@@ -8,12 +8,12 @@ default: &default
 
 development:
   <<: *default
-  database: simple-accounting_development
+  database: gulariya-dcs_development
 
 test:
   <<: *default
-  database: simple-accounting_test
+  database: gulariya-dcs_test
 
 production:
   <<: *default
-  database: simple-accounting_production
+  database: gulariya-dcs_production

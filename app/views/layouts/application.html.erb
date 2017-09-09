@@ -17,16 +17,11 @@
 
   <body>
     <div id = "wrap">
-      <%= render 'shared/nav' %>
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-
-      <hr><!-- horizontal line after navbar -->
-
+      <div class="nav">
+        <%= render 'shared/nav' %>
+      </div>
+      
+      <hr>
       <div class = "container">
         <%= render 'shared/flash_messages' %>
         <%= yield %>
