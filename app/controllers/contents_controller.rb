@@ -15,25 +15,25 @@ class ContentsController < ApplicationController
 	end
 
 	def edit
-	  @content = Content.find(params[:id])
+	  # @content = Content.find(params[:id])
 	end
 
 	def update
-	  @content = Content.find(params[:id])
-	  if @content.update(content_params)
-	  	flash[:success] = "A record has been successfully updated!"
-	    redirect_to received_transformer_path
-	  else
-	  	flash[:alert] = "Woops! Looks like there has been an error!"
-	    redirect_to edit_content_path(params[:id])
-	  end
+	  # @content = Content.find(params[:id])
+	  # if @content.update(content_params)
+	  # 	flash[:success] = "A record has been successfully updated!"
+	  #   redirect_to received_transformer_path
+	  # else
+	  # 	flash[:alert] = "Woops! Looks like there has been an error!"
+	  #   redirect_to edit_content_path(params[:id])
+	  # end
 	end
 
 	def destroy
-	  @content = Content.find(params[:id])
-	  @content.destroy
-	  flash[:success] = "The record was successfully deleted!"
-	  redirect_to received_transformer_path
+	  # @content = Content.find(params[:id])
+	  # @content.destroy
+	  # flash[:success] = "The record was successfully deleted!"
+	  # redirect_to received_transformer_path
 	end
 
 	private

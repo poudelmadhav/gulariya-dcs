@@ -15,25 +15,25 @@ class RecordsController < ApplicationController
 	end
 
 	def edit
-	  @record = Record.find(params[:id])
+	  # @record = Record.find(params[:id])
 	end
 
 	def update
-	  @record = Record.find(params[:id])
-	  if @record.update(record_params)
-	  	flash[:success] = "A record has been successfully updated!"
-	    redirect_to send_transformer_path
-	  else
-	  	flash[:alert] = "Woops! Looks like there has been an error!"
-	    redirect_to edit_record_path(params[:id])
-	  end
+	  # @record = Record.find(params[:id])
+	  # if @record.update(record_params)
+	  # 	flash[:success] = "A record has been successfully updated!"
+	  #   redirect_to send_transformer_path
+	  # else
+	  # 	flash[:alert] = "Woops! Looks like there has been an error!"
+	  #   redirect_to edit_record_path(params[:id])
+	  # end
 	end
 
 	def destroy
-	  @record = Record.find(params[:id])
-	  @record.destroy
-	  flash[:success] = "The record was successfully deleted!"
-	  redirect_to send_transformer_path
+	  # @record = Record.find(params[:id])
+	  # @record.destroy
+	  # flash[:success] = "The record was successfully deleted!"
+	  # redirect_to send_transformer_path
 	end
 
 	private
