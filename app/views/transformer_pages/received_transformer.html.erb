@@ -27,7 +27,7 @@
 		                </tr>
 					</thead>
 					<tbody>
-						<% if records.exists? %>
+						<% if @contents.exists? %>
 							<% @contents.each do |content| %>
 							  <tr>
 							  	  <td><%= content.sn %></td>
