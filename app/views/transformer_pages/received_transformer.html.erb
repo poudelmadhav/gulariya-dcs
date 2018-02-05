@@ -12,39 +12,45 @@
 <div class = "panel panel-default">
 	<div class = "panel-body">
 		<blockquote>
-			<table class = "table table-bordered">
-				<thead>
-					<tr>
-					  <th>S.N.</th>
-	                  <th>Capacity(kVA)</th>
-	                  <th>TR Serial No.</th>
-	                  <th>Company Name</th>
-	                  <th>Received Date</th>
-	                  <th>Installed Place</th>
-	                  <th>Received Gate Pass No.</th>
-	                  <th>Remarks</th>
-	                </tr>
-				</thead>
-				<tbody>
-					<% @contents.each do |content| %>
-					  <tr>
-					  	  <td><%= content.sn %></td>
-					  	  <td><%= content.kva %></td>
-						  <td><%= content.tr_sn %></td>
-						  <td><%= content.company_name %></td>
-						  <td><%= content.received_date %></td>
-						  <td><%= content.install_place %></td>
-						  <td><%= content.received_no %></td>
-						  <td><%= content.remarks %></td>
-						  <!--
-						  <td><%= link_to 'Edit', edit_content_path(content), class: 'btn btn-warning'%></td>
-						  <td><%= link_to 'Delete', content_path(content), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %></td>
-						  -->
+			<div class="table-responsive">
+				<table class = "table table-bordered">
+					<thead>
+						<tr>
+						  <th>S.N.</th>
+		                  <th>Capacity(kVA)</th>
+		                  <th>TR Serial No.</th>
+		                  <th>Company Name</th>
+		                  <th>Received Date</th>
+		                  <th>Installed Place</th>
+		                  <th>Received Gate Pass No.</th>
+		                  <th>Remarks</th>
+		                </tr>
+					</thead>
+					<tbody>
+						<% if records.exists? %>
+							<% @contents.each do |content| %>
+							  <tr>
+							  	  <td><%= content.sn %></td>
+							  	  <td><%= content.kva %></td>
+								  <td><%= content.tr_sn %></td>
+								  <td><%= content.company_name %></td>
+								  <td><%= content.received_date %></td>
+								  <td><%= content.install_place %></td>
+								  <td><%= content.received_no %></td>
+								  <td><%= content.remarks %></td>
+								  <!--
+								  <td><%= link_to 'Edit', edit_content_path(content), class: 'btn btn-warning'%></td>
+								  <td><%= link_to 'Delete', content_path(content), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %></td>
+								  -->
 
-					  	</tr>
-					<% end %>
-				</tbody>
-			</table>
+							  	</tr>
+							<% end %>
+						<% else %>
+							<p class="alert alert-danger text-center">No record found!</p>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
 		</blockquote>
 		
 	</div>
