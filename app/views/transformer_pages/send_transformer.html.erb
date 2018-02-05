@@ -26,8 +26,8 @@
 		                  <th>Remarks</th>
 		                </tr>
 					</thead>
-					<tbody>
-						<% if @records.exists? %>
+					<% if @records.exists? %>
+						<tbody>
 							<% @records.each do |record| %>
 							  <tr>
 							  	  <td><%= record.sn %></td>
@@ -42,15 +42,12 @@
 								  <td><%= link_to 'Edit', edit_record_path(record), class: 'btn btn-warning'%></td>
 								  <td><%= link_to 'Delete', record_path(record), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %></td>
 								  -->
-
 							  	</tr>
 							<% end %>
-						<% else %>
-							<tr>
-								<p>No record found!</p>
-							</tr>
-						<% end %>
-					</tbody>
+						</tbody>
+					<% else %>
+						<p class="alert alert-danger text-center">No record found!</p>
+					<% end %>
 				</table>
 			</div>
 		</blockquote>
