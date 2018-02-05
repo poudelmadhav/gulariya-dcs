@@ -11,7 +11,7 @@
 
 <div class = "panel panel-default">
 	<div class = "panel-body">
-		<blockquote>
+		<% if @records.exists? %>
 			<div class="table-responsive">
 				<table class = "table table-bordered">
 					<thead>
@@ -25,33 +25,30 @@
 		                  <th>Send Gate Pass No.</th>
 		                  <th>Remarks</th>
 		                </tr>
-					</thead>
-					<% if @records.exists? %>
-						<tbody>
-							<% @records.each do |record| %>
-							  <tr>
-							  	  <td><%= record.sn %></td>
-							  	  <td><%= record.kba %></td>
-								  <td><%= record.tr_sn %></td>
-								  <td><%= record.company_name %></td>
-								  <td><%= record.send_date %></td>
-								  <td><%= record.dismn_place %></td>
-								  <td><%= record.get_pass %></td>
-								  <td><%= record.remarks %></td>
-								  <!--
-								  <td><%= link_to 'Edit', edit_record_path(record), class: 'btn btn-warning'%></td>
-								  <td><%= link_to 'Delete', record_path(record), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %></td>
-								  -->
-							  	</tr>
-							<% end %>
-						</tbody>
-					<% else %>
-						<p class="alert alert-danger text-center">No record found!</p>
-					<% end %>
+					</thead>					
+					<tbody>
+						<% @records.each do |record| %>
+						  <tr>
+						  	  <td><%= record.sn %></td>
+						  	  <td><%= record.kba %></td>
+							  <td><%= record.tr_sn %></td>
+							  <td><%= record.company_name %></td>
+							  <td><%= record.send_date %></td>
+							  <td><%= record.dismn_place %></td>
+							  <td><%= record.get_pass %></td>
+							  <td><%= record.remarks %></td>
+							  <!--
+							  <td><%= link_to 'Edit', edit_record_path(record), class: 'btn btn-warning'%></td>
+							  <td><%= link_to 'Delete', record_path(record), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %></td>
+							  -->
+						  	</tr>
+						<% end %>
+					</tbody>					
 				</table>
 			</div>
-		</blockquote>
-		
+		<% else %>
+			<p class="alert alert-danger text-center">No record found!</p>
+		<% end %>
 	</div>
 
 	<div class = "text-center">
