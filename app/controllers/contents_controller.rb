@@ -9,7 +9,7 @@ class ContentsController < ApplicationController
 	    	flash[:success] = "A record has been successfully created!"
 	    	redirect_to received_transformer_path
 	 	else
-	    	flash[:alert] = "Woops! Looks like there has been an error!"
+	    	flash[:alert] = "#{@content.errors.full_messages.join(',')}"
 	    	render :new, status: :unprocessable_entity
 	 	end
 	end
