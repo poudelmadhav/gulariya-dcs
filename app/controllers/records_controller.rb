@@ -10,7 +10,7 @@ class RecordsController < ApplicationController
 	    	redirect_to send_transformer_path
 	 	else
 	    	flash[:alert] = "Woops! Looks like there has been an error!"
-	    	redirect_to new_record_path
+	    	render :new, status: :unprocessable_entity
 	 	end
 	end
 
