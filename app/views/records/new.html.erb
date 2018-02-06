@@ -1,6 +1,6 @@
 <h1>Add New Send Record</h1>
 <%= simple_form_for Record.new do |f| %>
-  <%= f.input :sn, label: 'S.N.' %>
+  <%= f.input :sn, label: 'S.N.', error: 'This is already taken!' %>
   <%= f.input :kba, label: 'Capacity(kVA)' %>
   <%= f.input :tr_sn, label: 'TR Serial No.' %>
   <%= f.input :company_name %>
