@@ -3,6 +3,10 @@ class RecordsController < ApplicationController
 		# @records = Record.all.order('sn ASC').paginate(:page => params[:page])
 	end
 
+	def new
+		@record = Record.new
+	end
+
 	def create
 		@record = Record.create(record_params)
 		if @record.valid?

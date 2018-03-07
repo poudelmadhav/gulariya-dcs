@@ -1,5 +1,5 @@
 <h1>Add New Received Record</h1>
-<%= simple_form_for Content.new do |f| %>
+<%= simple_form_for @content do |f| %>
   <%= f.input :sn, label: 'S.N.' %>
   <%= f.input :kva, label: 'Capacity(kVA)' %>
   <%= f.input :tr_sn, label: 'TR Serial No.' %>

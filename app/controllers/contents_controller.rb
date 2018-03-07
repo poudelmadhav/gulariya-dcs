@@ -3,6 +3,10 @@ class ContentsController < ApplicationController
 		# @contents = Content.all.order('created_at DESC').paginate(:page => params[:page])
 	end
 
+	def new
+		@content = Content.new
+	end
+
 	def create
 		@content = Content.create(content_params)
 		if @content.valid?
