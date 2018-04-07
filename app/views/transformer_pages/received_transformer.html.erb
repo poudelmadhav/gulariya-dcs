@@ -32,9 +32,9 @@
 			                </tr>
 						</thead>
 						<tbody id="myTable">					
-							<% @contents.each do |content| %>
+							<% @contents.each_with_index do |content, index| %>
 							  <tr>
-							  	  <td><%= content.sn %></td>
+							  	  <td><%= index += 1 %></td>
 							  	  <td><%= content.kva %></td>
 								  <td><%= content.tr_sn %></td>
 								  <td><%= content.company_name %></td>

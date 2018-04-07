@@ -32,9 +32,9 @@
 			                </tr>
 						</thead>					
 						<tbody id="myTable">
-							<% @records.each do |record| %>
+							<% @records.each_with_index do |record, index| %>
 							  <tr>
-							  	  <td><%= record.sn %></td>
+							  	  <td><%= index += 1 %></td>
 							  	  <td><%= record.kba %></td>
 								  <td><%= record.tr_sn %></td>
 								  <td><%= record.company_name %></td>

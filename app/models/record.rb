@@ -1,5 +1,5 @@
 class Record < ApplicationRecord
-	validates :tr_sn, :sn, :send_date, :kba, :dismn_place, presence: true
+	validates :tr_sn, :send_date, :kba, :dismn_place, presence: true
 
 	self.per_page = 50
 
